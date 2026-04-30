@@ -10,14 +10,14 @@ namespace ATMApplication
             Console.Write("Set a new PIN: ");
             string? newPin = Console.ReadLine();
 
-            // Initialize the account with the new PIN
+            
             BankAccount userAccount = new BankAccount(1000.00m, newPin ?? "0000");
 
             Console.WriteLine("\n--- Login ---");
             Console.Write("Enter your PIN: ");
             string? inputPin = Console.ReadLine();
 
-            // Verify the PIN
+            
             if (!userAccount.VerifyPin(inputPin ?? ""))
             {
                 Console.WriteLine("Incorrect PIN. Access Denied.");
@@ -26,7 +26,7 @@ namespace ATMApplication
 
             Console.WriteLine("Access Granted.");
             
-            // ... (The rest of your menu loop remains the same)
+            
             bool running = true;
             while (running)
             {
